@@ -296,6 +296,7 @@ h3 {
     color: #00aeef;
 }
 
+
 /*  Dropdown menu*/
 
 ul.sub-menu {
@@ -737,6 +738,40 @@ ul.sub-menu {
     margin-bottom: 10px;
 }
 
+#keys .key img {
+    width: 48px;
+}
+
+#keys .alphabet {
+    padding: 20px;
+}
+
+#keys .alphabet img {
+    width: 48px;
+}
+
+#keys .rounded {
+    border-radius: 20px;
+    background: #73AD21;
+    padding: 20px 70px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+#keys .rounded-blue {
+    border-radius: 20px;
+    background: #4FB7CD;
+    padding: 20px 70px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+#keys .link {
+  padding: 30px;
+  text-decoration: none;
+}
 
 /*************************
 *******About Us Page******
@@ -2726,6 +2761,10 @@ span.stButton_gradient,
     border-radius: 100%;
     margin: 10px 0;
 }
+
+
+/* Home */
+
 
 /* @media section */
 

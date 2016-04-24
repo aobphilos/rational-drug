@@ -35,6 +35,16 @@ module.exports = {
         };
 
         return res.view("home/contactus", vm);
+    },
+
+    keys: function(req, res) {
+
+        var vm = {
+            title: 'Keys',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/keys", vm);
     }
 
 };

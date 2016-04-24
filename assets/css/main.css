@@ -769,9 +769,43 @@ ul.sub-menu {
 }
 
 #keys .link {
-  padding: 30px;
-  text-decoration: none;
+    padding: 30px;
+    text-decoration: none;
 }
+
+#keys-detail {
+    font-family: tahoma, san-serif;
+}
+
+#keys-detail .topic {}
+
+#keys-detail .content {
+    padding: 30px;
+}
+
+#keys-detail .content p {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#keys-detail .content p.sub {
+    padding: 0px 70px;
+    text-indent: 0px;
+    text-align: justify;
+}
+
+#keys-detail .topic h3 {
+    font-size: 20px;
+}
+
+#keys-detail .topic label {
+    font-size: 16px;
+}
+
+#keys-detail .topic img {
+    width: 48px;
+}
+
 
 /*************************
 *******About Us Page******
@@ -2771,5 +2805,14 @@ span.stButton_gradient,
 @media (max-width:768px) {
     #header .navbar-brand h1 img {
         width: 64px;
+    }
+    #keys-detail .content p {
+        text-indent: 30px;
+        text-align: justify;
+    }
+    #keys-detail .content p.sub {
+        padding: 0px 50px;
+        text-indent: 0px;
+        text-align: justify;
     }
 }

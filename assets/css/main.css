@@ -738,74 +738,6 @@ ul.sub-menu {
     margin-bottom: 10px;
 }
 
-#keys .key img {
-    width: 48px;
-}
-
-#keys .alphabet {
-    padding: 20px;
-}
-
-#keys .alphabet img {
-    width: 48px;
-}
-
-#keys .rounded {
-    border-radius: 20px;
-    background: #73AD21;
-    padding: 20px 70px;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-}
-
-#keys .rounded-blue {
-    border-radius: 20px;
-    background: #4FB7CD;
-    padding: 20px 70px;
-    font-weight: 400;
-    font-size: 16px;
-    color: #fff;
-}
-
-#keys .link {
-    padding: 30px;
-    text-decoration: none;
-}
-
-#keys-detail {
-    font-family: tahoma, san-serif;
-}
-
-#keys-detail .topic {}
-
-#keys-detail .content {
-    padding: 30px;
-}
-
-#keys-detail .content p {
-    text-indent: 50px;
-    text-align: justify;
-}
-
-#keys-detail .content p.sub {
-    padding: 0px 70px;
-    text-indent: 0px;
-    text-align: justify;
-}
-
-#keys-detail .topic h3 {
-    font-size: 20px;
-}
-
-#keys-detail .topic label {
-    font-size: 16px;
-}
-
-#keys-detail .topic img {
-    width: 48px;
-}
-
 
 /*************************
 *******About Us Page******
@@ -2797,14 +2729,112 @@ span.stButton_gradient,
 }
 
 
-/* Home */
+/* keys */
+
+#keys .key {
+    text-align: right;
+}
+
+#keys .key img {
+    width: 48px;
+}
+
+#keys .alphabet {
+    padding: 20px;
+}
+
+#keys .alphabet img {
+    width: 48px;
+}
+
+#keys .rounded {
+    border-radius: 20px;
+    background: #73AD21;
+    padding: 20px 70px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#keys .rounded.green {
+    background: #73AD21;
+}
+
+#keys .rounded.blue {
+    background: #4FB7CD;
+}
+
+#keys .link {
+    padding: 30px;
+    text-decoration: none;
+}
+
+
+/* keys-detail */
+
+#keys-detail {
+    font-family: tahoma, san-serif;
+}
+
+#keys-detail .topic {}
+
+#keys-detail .topic .key {}
+
+#keys-detail .topic .key img {
+    width: 48px;
+}
+
+#keys-detail .content {
+    padding: 30px;
+}
+
+#keys-detail .content p {
+    text-indent: 50px;
+    text-align: justify;
+}
+
+#keys-detail .content p.sub {
+    padding: 0px 70px;
+    text-indent: 0px;
+    text-align: justify;
+}
+
+#keys-detail .topic h3 {
+    font-size: 20px;
+}
+
+#keys-detail .topic label {
+    font-size: 16px;
+}
+
+
+/* knowledge-people */
+
+#people {}
+
+#people .alphabet img {
+    width: 48px;
+}
+
+#people .topic label {
+    font-size: 16px;
+}
 
 
 /* @media section */
 
 @media (max-width:768px) {
-    #header .navbar-brand h1 img {
+    #header .navbar-brand img {
         width: 64px;
+    }
+    #header .navbar-brand h2 {
+        font-size: 18px;
+        margin: 12px 0px;
+    }
+    #keys .rounded {
+        padding: 20px 40px;
     }
     #keys-detail .content p {
         text-indent: 30px;
@@ -2812,6 +2842,40 @@ span.stButton_gradient,
     }
     #keys-detail .content p.sub {
         padding: 0px 50px;
+        text-indent: 0px;
+        text-align: justify;
+    }
+}
+
+@media (max-width:480px) {
+    #header .navbar-brand img {
+        width: 48px;
+    }
+    #header .navbar-brand h2 {
+        font-size: 16px;
+        margin: 8px 0px;
+    }
+    #keys .key img {
+        width: 32px;
+    }
+    #keys .alphabet {
+        padding: 10px;
+    }
+    #keys .alphabet img {
+        width: 32px;
+    }
+    #keys .rounded {
+        padding: 15px 30px;
+    }
+    #keys-detail .topic .key img {
+        width: 32px;
+    }
+    #keys-detail .content p {
+        text-indent: 20px;
+        text-align: justify;
+    }
+    #keys-detail .content p.sub {
+        padding: 0px 30px;
         text-indent: 0px;
         text-align: justify;
     }

@@ -365,13 +365,7 @@
     .single-blog.two-column .post-overlay {
         margin-top: 0;
     }
-    /* Portfolio */
-    .project-name h2 {
-        margin-top: 20px;
-    }
-    .portfolio-filter li a {
-        padding: 0 15px;
-    }
+
     /*Coming Soon CSS*/
     #countdown li.angle-one {
         left: 60px;

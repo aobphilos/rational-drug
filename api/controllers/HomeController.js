@@ -45,6 +45,16 @@ module.exports = {
         };
 
         return res.view("home/keys", vm);
+    },
+
+    downloads: function(req, res) {
+
+        var vm = {
+            title: 'Download',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/downloads", vm);
     }
 
 };

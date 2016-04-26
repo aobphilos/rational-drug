@@ -2590,6 +2590,36 @@ span.stButton_gradient,
     padding: 0px;
 }
 
+.seperate {
+    border-bottom: 2px dashed olive;
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+ul.square {
+    list-style-type: square;
+    margin: 15px 20px;
+}
+
+ul.square li {
+    margin: 10px 0px;
+}
+
+
+/* downloads */
+
+#downloads {
+    margin: 25px 0px;
+}
+
+#downloads .content img {
+    width: 96px;
+}
+
+#downloads .content div {
+    padding: 15px 0px;
+}
+
 
 /* @media section */
 
@@ -2602,7 +2632,7 @@ span.stButton_gradient,
         margin: 12px 0px;
     }
     #keys .rounded {
-        padding: 20px 40px;
+        padding: 15px 20px;
     }
     #keys-detail .content p {
         text-indent: 30px;
@@ -2627,6 +2657,9 @@ span.stButton_gradient,
     #people .content img {
         padding-left: 0px;
     }
+    #download {
+        margin: 15px 0px;
+    }
 }
 
 @media (max-width:480px) {
@@ -2646,9 +2679,6 @@ span.stButton_gradient,
     #keys .alphabet img {
         width: 32px;
     }
-    #keys .rounded {
-        padding: 15px 30px;
-    }
     #keys-detail .topic .key img {
         width: 32px;
     }
@@ -2665,5 +2695,8 @@ span.stButton_gradient,
         padding: 5px 10px;
         font-weight: 200;
         font-size: 12px;
+    }
+    #downloads .content img {
+        width: 128px;
     }
 }

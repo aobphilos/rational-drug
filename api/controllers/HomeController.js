@@ -9,14 +9,52 @@ module.exports = {
 
     index: function(req, res) {
 
-        var obj = {
-            title: 'Batman',
+        var vm = {
+            title: 'Home',
             desc: 'I\'m Batman'
         };
 
-        return res.view("home/index", {
-            vm: obj
-        });
+        return res.view("home/index", vm);
+    },
+
+    faq: function(req, res) {
+
+        var vm = {
+            title: 'Faq',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/faq", vm);
+    },
+
+    contactus: function(req, res) {
+
+        var vm = {
+            title: 'Contactus',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/contactus", vm);
+    },
+
+    keys: function(req, res) {
+
+        var vm = {
+            title: 'Keys',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/keys", vm);
+    },
+
+    downloads: function(req, res) {
+
+        var vm = {
+            title: 'Download',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/downloads", vm);
     }
 
 };

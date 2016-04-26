@@ -32,7 +32,14 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    '/': 'HomeController.index'
+    '/': 'HomeController.index',
+    '/faq': 'HomeController.faq',
+    '/contactus': 'HomeController.contactus',
+    '/keys': 'HomeController.keys',
+    '/downloads': 'HomeController.downloads',
+
+    '/knowledges/people': 'KnowledgeController.people',
+    '/knowledges/healthcare': 'KnowledgeController.healthcare',
 
     /***************************************************************************
      *                                                                          *

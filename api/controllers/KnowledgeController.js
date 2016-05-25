@@ -25,5 +25,15 @@ module.exports = {
         };
 
         return res.view("knowledges/healthcare", vm);
+    },
+
+    label: function(req, res) {
+
+        var vm = {
+            title: 'Label',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("knowledges/label", vm);
     }
 };

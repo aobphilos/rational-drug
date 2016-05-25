@@ -2619,25 +2619,42 @@ span.stButton_gradient,
     padding: 30px;
 }
 
-#faq .content p {
+#faq .content img {
+    width: 96px;
+}
+
+#faq .content p,
+#faq .content div {
+    height: 150px;
     text-align: justify;
-    padding: 20px 50px 20px 40px;
     margin: 5px 0px;
-    border-radius: 20px;
-    background: #73AD21;
-    color: #fff;
+    /* border-radius: 20px; */
 }
 
 #faq .content p.question {
-    font-weight: 700;
-    background: #CBEBEF;
+    background: rgba(0, 0, 0, 0) url("/images/faq/callout2.png") no-repeat scroll 80px 0 / 750px 95px content-box border-box;
+}
+
+#faq .content p.question label {
+    left: 90px;
+    position: relative;
     color: #374C37;
 }
 
-#faq .content p.answer {
-    padding: 20px 80px 20px 80px;
-    background: #ABD09C;
+#faq .content div.answer {
+    background: rgba(0, 0, 0, 0) url("/images/faq/callout.png") no-repeat scroll 0 0 / 830px 102px content-box border-box;
+}
+
+#faq .content div.answer .text {
+    width: 730px;
+    padding: 0px 40px;
+    margin: 0px 50px 0px 0px;
     color: #113A31;
+}
+
+#faq .content div.answer .image {
+    width: 165px;
+    text-align: right
 }
 
 
@@ -2687,6 +2704,30 @@ ul.square {
 
 ul.square li {
     margin: 10px 0px;
+}
+
+
+/* Label */
+
+#label {
+    margin: 20px 0px;
+}
+
+#label .topic {
+    margin: 15px 0px;
+}
+
+#label .topic label {
+    font-size: 18px;
+}
+
+#label .topic img {
+    width: 45px;
+    padding-right: 15px;
+}
+
+#label .content {
+    padding: 30px 40px;
 }
 
 

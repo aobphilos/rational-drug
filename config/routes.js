@@ -41,6 +41,7 @@ module.exports.routes = {
 
     '/knowledges/people': 'KnowledgeController.people',
     '/knowledges/healthcare': 'KnowledgeController.healthcare',
+    '/knowledges/label': 'KnowledgeController.label',
 
     /***************************************************************************
      *                                                                          *

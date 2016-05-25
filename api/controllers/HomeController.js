@@ -55,6 +55,16 @@ module.exports = {
         };
 
         return res.view("home/downloads", vm);
+    },
+
+    multimedia: function(req, res) {
+
+        var vm = {
+            title: 'Multimedia',
+            desc: 'I\'m Batman'
+        };
+
+        return res.view("home/multimedia", vm);
     }
 
 };

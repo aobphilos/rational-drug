@@ -57,8 +57,6 @@ jQuery(function($) {
 
     $(document).ready(function() {
 
-
-
         // People Section
         // if ($('#people').length > 0) {
 

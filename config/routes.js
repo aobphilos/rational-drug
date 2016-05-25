@@ -37,6 +37,7 @@ module.exports.routes = {
     '/contactus': 'HomeController.contactus',
     '/keys': 'HomeController.keys',
     '/downloads': 'HomeController.downloads',
+    '/multimedia': 'HomeController.multimedia',
 
     '/knowledges/people': 'KnowledgeController.people',
     '/knowledges/healthcare': 'KnowledgeController.healthcare',

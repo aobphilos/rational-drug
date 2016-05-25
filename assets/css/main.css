@@ -166,7 +166,7 @@ h3 {
 
 #header {
     margin-bottom: 0;
-    padding: 30px 0 60px 0;
+    padding: 25px 0;
 }
 
 #header .navbar-inverse .container {
@@ -2519,6 +2519,43 @@ span.stButton_gradient,
 }
 
 
+/* postboard */
+
+#postboard {
+    margin: 15px 0px;
+}
+
+#postboard .content {
+    padding: 40px 0;
+}
+
+#postboard .content iframe {
+    width: 385px;
+    height: 275px;
+    margin: 0 30px;
+}
+
+#postboard .link {
+    padding: 30px;
+    text-decoration: none;
+}
+
+
+/* provider */
+
+#provider {
+    margin: 15px 0px;
+}
+
+#provider .content {
+    padding: 15px 0px 40px 0px;
+}
+
+#provider .content img {
+    width: 70px;
+}
+
+
 /* keys-detail */
 
 #keys-detail {
@@ -2609,7 +2646,7 @@ ul.square li {
 /* downloads */
 
 #downloads {
-    margin: 25px 0px;
+    margin: 20px 0px;
 }
 
 #downloads .content img {
@@ -2618,6 +2655,27 @@ ul.square li {
 
 #downloads .content div {
     padding: 15px 0px;
+}
+
+
+/* multimedia */
+
+#multimedia {
+    margin: 20px 0px;
+}
+
+#multimedia .content img {
+    width: 96px;
+}
+
+#multimedia .content div {
+    padding: 15px 0px;
+}
+
+#multimedia .content iframe {
+    width: 385px;
+    height: 275px;
+    margin: 5px 0px 45px 45px;
 }
 
 

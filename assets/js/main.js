@@ -58,30 +58,34 @@ jQuery(function($) {
     $(document).ready(function() {
 
         // People Section
-        // if ($('#people').length > 0) {
+        if ($('#people').length > 0) {
 
-        //     var $image = $('.content img');
-        //     var $menu = $('.menu .rounded');
+            var $image = $('.content img');
+            var $menu = $('.menu .rounded');
 
-        //     var showImage = function(e) {
-        //         e.preventDefault();
+            var showImage = function(e) {
+                e.preventDefault();
 
-        //         var imageName = $(e.currentTarget).data("show-image");
-        //         $image.hide();
-        //         $(imageName).show();
-        //         $(imageName).trigger("unveil");
+                var imageName = $(e.currentTarget).data("show-image");
+                $image.hide();
 
-        //     };
+                setTimeout(function() {
+                    $(imageName).show();
+                    $(imageName).trigger("unveil");
+                }, 200);
+            };
 
-        //     $image.unveil();
-        //     $image.hide();
+            $image.unveil();
+            $image.hide();
 
-        //     $($image[0]).show();
-        //     $($image[0]).trigger("unveil");
+            $menu.click(showImage);
 
-        //     $menu.click(showImage);
-        // }
+            setTimeout(function() {
+                $($image[0]).show();
+                $($image[0]).trigger("unveil");
+            }, 200);
 
+        }
 
     });
 

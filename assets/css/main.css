@@ -2730,6 +2730,11 @@ ul.square li {
     padding: 30px 40px;
 }
 
+#label .text_label {
+    padding: 25px;
+    text-align: justify;
+}
+
 
 /* downloads */
 

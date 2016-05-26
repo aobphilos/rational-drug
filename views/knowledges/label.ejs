@@ -6,7 +6,76 @@
                 <label>ฉลากยา และฉลากยาเสริม</label>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12 content">
-                XXX
+                <div class="col-md-9 col-sm-9 col-xs-9">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">โรงพยาบาลส่งเสริมการใช้ยาอย่างสมเหตุผล</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="col-md-2">
+                                            <label class="control-label">ชื่อยา</label>
+                                        </td>
+                                        <td><span id="drug_name"></span></td>
+                                        <td class="col-md-2"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label">ข้อบ่งใช้</label>
+                                        </td>
+                                        <td><span id="term_of_use"></span></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label">คำเตือน</label>
+                                        </td>
+                                        <td><span id="warning_label"></span></td>
+                                        <td>
+                                            <label class="control-label">หมายเหตุ</label>
+                                        </td>
+                                        <td><span id="remark"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="control-label">ฉลากยาเสริม</label>
+                                        </td>
+                                        <td colspan="3" class="text_label"><span id="text_label"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="ชื่อยา" id="keyword">
+                        <span class="input-group-btn"><button type="button" id="btnFind" class="btn btn-default" data-loading-text="Loading..." >ค้นหา</button></span>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <span> ฉลากยากลุ่มนำร่อง 15 รายการ</span>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Paracetamol tablet</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Paracetamol syrup</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Paracetamol combination</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Amoxycillin (ชนิดเม็ด)</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Amoxycillin (ชนิดน้ำ)</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Domperidone</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Ibuprofen</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Cetirizine</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Enalapril</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Amlodipine</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Metformin</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Sulfonylurea</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Simvastatin</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Colchicine</button>
+                        <button type="button" class="btn btn-info btn-md btn-block" data-loading-text="Loading..." autocomplete="off">Allopurinol</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

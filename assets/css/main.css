@@ -166,7 +166,7 @@ h3 {
 
 #header {
     margin-bottom: 0;
-    padding: 30px 0 60px 0;
+    padding: 25px 0;
 }
 
 #header .navbar-inverse .container {
@@ -580,8 +580,8 @@ ul.sub-menu {
 
 #home-slider .slider-sun {
     position: absolute;
-    right: 0px;
-    bottom: 10px;
+    right: 17px;
+    bottom: 11px;
 }
 
 .animate-in .slider-sun {
@@ -2519,6 +2519,58 @@ span.stButton_gradient,
 }
 
 
+/* postboard */
+
+#postboard {
+    margin: 15px 0px;
+}
+
+#postboard .content {
+    padding: 40px 0;
+}
+
+#postboard .content iframe {
+    width: 385px;
+    height: 275px;
+    margin: 0 30px;
+}
+
+#postboard .link {
+    padding: 30px;
+    text-decoration: none;
+}
+
+
+/* results */
+
+#results {
+    margin: 15px 0px;
+}
+
+#results .content {
+    padding: 15px 0px 80px 0px;
+}
+
+#results .content img {
+    height: 35px;
+}
+
+
+/* provider */
+
+#provider {
+    margin: 15px 0px;
+}
+
+#provider .content {
+    padding: 15px 0px 40px 0px;
+}
+
+#provider .content img {
+    width: 70px;
+}
+
+
 /* keys-detail */
 
 #keys-detail {
@@ -2554,6 +2606,55 @@ span.stButton_gradient,
 
 #keys-detail .topic label {
     font-size: 16px;
+}
+
+
+/* Faq */
+
+#faq {
+    font-family: tahoma, san-serif;
+}
+
+#faq .content {
+    padding: 30px;
+}
+
+#faq .content img {
+    width: 96px;
+}
+
+#faq .content p,
+#faq .content div {
+    height: 150px;
+    text-align: justify;
+    margin: 5px 0px;
+    /* border-radius: 20px; */
+}
+
+#faq .content p.question {
+    background: rgba(0, 0, 0, 0) url("/images/faq/callout2.png") no-repeat scroll 80px 0 / 750px 95px content-box border-box;
+}
+
+#faq .content p.question label {
+    left: 90px;
+    position: relative;
+    color: #374C37;
+}
+
+#faq .content div.answer {
+    background: rgba(0, 0, 0, 0) url("/images/faq/callout.png") no-repeat scroll 0 0 / 830px 102px content-box border-box;
+}
+
+#faq .content div.answer .text {
+    width: 730px;
+    padding: 0px 40px;
+    margin: 0px 50px 0px 0px;
+    color: #113A31;
+}
+
+#faq .content div.answer .image {
+    width: 165px;
+    text-align: right
 }
 
 
@@ -2606,10 +2707,39 @@ ul.square li {
 }
 
 
+/* Label */
+
+#label {
+    margin: 20px 0px;
+}
+
+#label .topic {
+    margin: 15px 0px;
+}
+
+#label .topic label {
+    font-size: 18px;
+}
+
+#label .topic img {
+    width: 45px;
+    padding-right: 15px;
+}
+
+#label .content {
+    padding: 30px 40px;
+}
+
+#label .text_label {
+    padding: 25px;
+    text-align: justify;
+}
+
+
 /* downloads */
 
 #downloads {
-    margin: 25px 0px;
+    margin: 20px 0px;
 }
 
 #downloads .content img {
@@ -2618,6 +2748,27 @@ ul.square li {
 
 #downloads .content div {
     padding: 15px 0px;
+}
+
+
+/* multimedia */
+
+#multimedia {
+    margin: 20px 0px;
+}
+
+#multimedia .content img {
+    width: 96px;
+}
+
+#multimedia .content div {
+    padding: 15px 0px;
+}
+
+#multimedia .content iframe {
+    width: 385px;
+    height: 275px;
+    margin: 5px 0px 45px 45px;
 }
 
 

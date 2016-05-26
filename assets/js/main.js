@@ -57,8 +57,6 @@ jQuery(function($) {
 
     $(document).ready(function() {
 
-
-
         // People Section
         if ($('#people').length > 0) {
 
@@ -70,20 +68,68 @@ jQuery(function($) {
 
                 var imageName = $(e.currentTarget).data("show-image");
                 $image.hide();
-                $(imageName).show();
-                $(imageName).trigger("unveil");
 
+                setTimeout(function() {
+                    $(imageName).show();
+                    $(imageName).trigger("unveil");
+                }, 200);
             };
 
             $image.unveil();
             $image.hide();
 
-            $($image[0]).show();
-            $($image[0]).trigger("unveil");
-
             $menu.click(showImage);
+
+            setTimeout(function() {
+                $($image[0]).show();
+                $($image[0]).trigger("unveil");
+            }, 200);
+
         }
 
+        if ($('#label').length > 0) {
+
+            $('button').on('click', function() {
+                var $btn = $(this).button('loading');
+
+                var drug_name = "";
+
+                // business logic...
+                if ($btn.attr('id') == "btnFind") {
+                    // find drug by keyword
+                    drug_name = $.trim($("#keyword").val());
+                } else {
+                    // find drug by name
+                    drug_name = $btn.text();
+                }
+
+                if (drug_name == "") {
+                    $("#keyword").val("");
+                    $btn.button('reset');
+                    return;
+                }
+
+                var convertCR = function(text){
+                    return text.replace(/\r\n/g, "<br>").replace(/\n/g, "<br>");
+                };
+
+                var callback = function(data) {
+
+                    $('#drug_name').text(data.drug_name);
+                    $('#term_of_use').text(data.term_of_use);
+                    $('#warning_label').text(data.warning_label);
+                    $('#remark').text(data.remark);
+                    $('#text_label').html(convertCR(data.text_label));
+
+                    $btn.button('reset');
+                };
+
+                $.post('/knowledges/label', { drug_name: drug_name })
+                    .done(callback)
+                    .fail(callback);
+
+            });
+        }
 
     });
 

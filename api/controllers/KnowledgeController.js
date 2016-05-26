@@ -45,23 +45,17 @@ module.exports = {
         if (param == undefined || param.drug_name == undefined)
             return res.badRequest();
 
-        // console.log('param: ', param.drug_name);
-
-        var excel = sails.session['excel'];
-        // console.log(excel[0].warning_label);
-
-        var result = _.find(excel, function(xls) {
-            return _.startsWith(xls.drug_name.toLowerCase(), param.drug_name.toLowerCase());
-        });
-
-        if (!result)
-            result = _.find(excel, { drug_name: "" });
-
         // drug_name
         // term_of_use
         // warning_label
         // text_label
         // remark
-        return res.json(result);
+
+        DrugLabelService.findByName(param.drug_name)
+            .then(function(result) {
+                return res.json(result);
+            });
+
+        // return res.json(result);
     }
 };

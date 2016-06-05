@@ -109,7 +109,7 @@ jQuery(function($) {
                     return;
                 }
 
-                var convertCR = function(text){
+                var convertCR = function(text) {
                     return text.replace(/\r\n/g, "<br>").replace(/\n/g, "<br>");
                 };
 
@@ -129,6 +129,16 @@ jQuery(function($) {
                     .fail(callback);
 
             });
+        }
+
+        // Result Section
+        if ($('#results').length > 0) {
+
+            $("#btnLogin").on('click', function(e) {
+                e.preventDefault();
+                console.log('login');
+            });
+
         }
 
     });

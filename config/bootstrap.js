@@ -18,20 +18,20 @@ module.exports.bootstrap = function(cb) {
 
     // user constant
     var userList = [
-        { userName: "admin", password: "panda" },
-        { userName: "siriraj", password: "password" },
-        { userName: "rajavithi", password: "password" },
-        { userName: "children", password: "password" },
-        { userName: "vajira", password: "password" },
-        { userName: "phramongkut", password: "password" },
-        { userName: "thammasat", password: "password" },
-        { userName: "msmchos", password: "password" },
-        { userName: "chulahos", password: "password" },
-        { userName: "songkla", password: "password" },
-        { userName: "ramathibodi", password: "password" },
-        { userName: "srinagarind", password: "password" },
-        { userName: "naresuan", password: "password" },
-        { userName: "burapha", password: "password" },
+        { username: "admin", password: "panda" },
+        { username: "siriraj", password: "password" },
+        { username: "rajavithi", password: "password" },
+        { username: "children", password: "password" },
+        { username: "vajira", password: "password" },
+        { username: "phramongkut", password: "password" },
+        { username: "thammasat", password: "password" },
+        { username: "msmchos", password: "password" },
+        { username: "chulahos", password: "password" },
+        { username: "songkla", password: "password" },
+        { username: "ramathibodi", password: "password" },
+        { username: "srinagarind", password: "password" },
+        { username: "naresuan", password: "password" },
+        { username: "burapha", password: "password" },
     ]
 
 
@@ -41,8 +41,7 @@ module.exports.bootstrap = function(cb) {
         .then(function() {
 
             cb();
+
         });
-
-
 
 };

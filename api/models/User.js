@@ -16,7 +16,7 @@ module.exports = {
             primaryKey: true,
             unique: true
         },
-        userName: { type: 'string' },
+        username: { type: 'string' },
         password: { type: 'string' },
         firstName: { type: 'string' },
         lastName: { type: 'string' }

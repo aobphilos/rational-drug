@@ -1,113 +1,181 @@
-jQuery(function($) {'use strict';
+jQuery(function($) {
+  'use strict';
 
-	//Responsive Nav
-	$('li.dropdown').find('.fa-angle-down').each(function(){
-		$(this).on('click', function(){
-			if( $(window).width() < 768 ) {
-				$(this).parent().next().slideToggle();
-			}
-			return false;
-		});
-	});
+  //Responsive Nav
+  $('li.dropdown').find('.fa-angle-down').each(function() {
+    $(this).on('click', function() {
+      if ($(window).width() < 768) {
+        $(this).parent().next().slideToggle();
+      }
+      return false;
+    });
+  });
 
-	//Fit Vids
-	if( $('#video-container').length ) {
-		$("#video-container").fitVids();
-	}
+  //Initiat WOW JS
+  new WOW().init();
 
-	//Initiat WOW JS
-	new WOW().init();
+  // Home filter
+  $(window).load(function() {
 
-	// portfolio filter
-	$(window).load(function(){
+    $('.main-slider').addClass('animate-in');
+    $('.preloader').remove();
+    //End Preloader
 
-		$('.main-slider').addClass('animate-in');
-		$('.preloader').remove();
-		//End Preloader
+    if ($('.masonery_area').length) {
+      $('.masonery_area').masonry(); //Masonry
+    }
 
-		if( $('.masonery_area').length ) {
-			$('.masonery_area').masonry();//Masonry
-		}
+  });
 
-		var $portfolio_selectors = $('.portfolio-filter >li>a');
-		
-		if($portfolio_selectors.length) {
-			
-			var $portfolio = $('.portfolio-items');
-			$portfolio.isotope({
-				itemSelector : '.portfolio-item',
-				layoutMode : 'fitRows'
-			});
-			
-			$portfolio_selectors.on('click', function(){
-				$portfolio_selectors.removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				$portfolio.isotope({ filter: selector });
-				return false;
-			});
-		}
+  $('.timer').each(count);
 
-	});
+  function count(options) {
+    var $this = $(this);
+    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+    $this.countTo(options);
+  }
+
+  // Contact form
+  var form = $('#main-contact-form');
+  form.submit(function(event) {
+    event.preventDefault();
+    var form_status = $('<div class="form_status"></div>');
+    $.ajax({
+      url: $(this).attr('action'),
+      beforeSend: function() {
+        form.prepend(form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn());
+      }
+    }).done(function(data) {
+      form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+    });
+  });
+
+  // Progress Bar
+  $.each($('div.progress-bar'), function() {
+    $(this).css('width', $(this).attr('data-transition') + '%');
+  });
+
+  $(document).ready(function() {
+
+    // People Section
+    if ($('#people').length > 0) {
+
+      var $image = $('.content img');
+      var $menu = $('.menu .rounded');
+
+      var showImage = function(e) {
+        e.preventDefault();
+
+        var imageName = $(e.currentTarget).data("show-image");
+        $image.hide();
+
+        setTimeout(function() {
+          $(imageName).show();
+          $(imageName).trigger("unveil");
+        }, 200);
+      };
+
+      $image.unveil();
+      $image.hide();
+
+      $menu.click(showImage);
+
+      setTimeout(function() {
+        $($image[0]).show();
+        $($image[0]).trigger("unveil");
+      }, 200);
+
+    }
+
+    if ($('#label').length > 0) {
+
+      $('button').on('click', function() {
+        var $btn = $(this).button('loading');
+
+        var drug_name = "";
+
+        // business logic...
+        if ($btn.attr('id') == "btnFind") {
+          // find drug by keyword
+          drug_name = $.trim($("#keyword").val());
+        } else {
+          // find drug by name
+          drug_name = $btn.text();
+        }
+
+        if (drug_name == "") {
+          $("#keyword").val("");
+          $btn.button('reset');
+          return;
+        }
+
+        var convertCR = function(text) {
+          return text.replace(/\r\n/g, "<br>").replace(/\n/g, "<br>");
+        };
+
+        var callback = function(data) {
+
+          $('#drug_name').text(data.drug_name);
+          $('#term_of_use').text(data.term_of_use);
+          $('#warning_label').text(data.warning_label);
+          $('#remark').text(data.remark);
+          $('#text_label').html(convertCR(data.text_label));
+
+          $btn.button('reset');
+        };
+
+        $.post('/knowledges/label', { drug_name: drug_name })
+          .done(callback)
+          .fail(callback);
+
+      });
+    }
+
+    // Result Section
+    if ($('#results').length > 0) {
+
+      $(".alert").hide();
+
+      $("#btnLogin").on('click', function(e) {
+        e.preventDefault();
+
+        var data = {
+          username: $("#username").val(),
+          password: $("#password").val()
+        };
+
+        var callback = function(result) {
+
+          if (result.user) {
+            window.location.href = "/results";
+          } else {
+            $("#frmLogin").removeClass("has-warning");
+            $("#frmLogin").addClass("has-error");
+            $(".alert").show();
+
+            setTimeout(function() {
+              $(".alert").hide();
+              $("#frmLogin").removeClass("has-error");
+              $("#frmLogin").addClass("has-warning");
+            }, 3500);
+          }
 
 
-	$('.timer').each(count);
-	function count(options) {
-		var $this = $(this);
-		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-		$this.countTo(options);
-	}
-		
-	// Search
-	$('.fa-search').on('click', function() {
-		$('.field-toggle').fadeToggle(200);
-	});
+        };
 
-	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
-		event.preventDefault();
-		var form_status = $('<div class="form_status"></div>');
-		$.ajax({
-			url: $(this).attr('action'),
-			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
-			}
-		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
-		});
-	});
+        $.post('/login', data)
+          .done(callback);
 
-	// Progress Bar
-	$.each($('div.progress-bar'),function(){
-		$(this).css('width', $(this).attr('data-transition')+'%');
-	});
+      });
 
-	if( $('#gmap').length ) {
-		var map;
+      $("#password").on('keydown', function(e) {
+        if (e.keyCode == 13) {
+          $("#btnLogin").click();
+        }
+      });
 
-		map = new GMaps({
-			el: '#gmap',
-			lat: 43.04446,
-			lng: -76.130791,
-			scrollwheel:false,
-			zoom: 16,
-			zoomControl : false,
-			panControl : false,
-			streetViewControl : false,
-			mapTypeControl: false,
-			overviewMapControl: false,
-			clickable: false
-		});
+    }
 
-		map.addMarker({
-			lat: 43.04446,
-			lng: -76.130791,
-			animation: google.maps.Animation.DROP,
-			verticalAlign: 'bottom',
-			horizontalAlign: 'center',
-			backgroundColor: '#3e8bff',
-		});
-	}
+  });
 
 });

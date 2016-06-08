@@ -32,7 +32,23 @@ module.exports.routes = {
      *                                                                          *
      ***************************************************************************/
 
-    '/': 'HomeController.index'
+    'get /': 'HomeController.index',
+    'get /faq': 'HomeController.faq',
+    'get /contactus': 'HomeController.contactus',
+    'get /keys': 'HomeController.keys',
+    'get /downloads': 'HomeController.downloads',
+    'get /multimedia': 'HomeController.multimedia',
+    'get /results': 'HomeController.results',
+
+
+    'get /knowledges/people': 'KnowledgeController.people',
+    'get /knowledges/healthcare': 'KnowledgeController.healthcare',
+
+    'get /knowledges/label': 'KnowledgeController.label',
+    'post /knowledges/label': 'KnowledgeController.postLabel',
+
+    'post /login': 'AuthController.login',
+    'get /logout': 'AuthController.logout',
 
     /***************************************************************************
      *                                                                          *

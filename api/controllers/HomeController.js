@@ -11,13 +11,8 @@ module.exports = {
 
     var vm = {
       title: 'Home',
-      desc: 'I\'m Batman',
-      isAuthen: false
+      desc: 'I\'m Batman'
     };
-
-    if (req.session.passport && req.session.passport.user) {
-      vm.isAuthen = true;
-    }
 
     return res.view("home/index", vm);
   },

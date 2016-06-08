@@ -167,85 +167,92 @@
     </div>
   </div>
 </section>
-<% if(!isAuthen) { %>
-<section id="results">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12 ">
-        <div class="col-md-10 col-sm-10 col-xs-10">
-          <h2>ผลการดำเนินงาน (สำหรับคณะทำงานฯ เท่านั้น)</h2>
+<% if(!req.isAuthenticated()) { %>
+  <section id="results">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 ">
+          <div class="col-md-10 col-sm-10 col-xs-10">
+            <h2>ผลการดำเนินงาน (สำหรับคณะทำงานฯ เท่านั้น)</h2>
+          </div>
         </div>
-      </div>
-      <div class="col-md-12 col-sm-12 col-xs-12 content text-center">
-        <div class="col-md-4 col-sm-4 col-xs-4">
-          <img src="/images/home/login_user.png" alt="User Login">
-        </div>
-        <div class="col-md-8 col-sm-8 col-xs-8">
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <label for="username" class="col-md-2 col-sm-2 col-xs-2">Username</label>
-            <div class="col-md-5 col-sm-5 col-xs-5">
-              <input type="text" class="form-control" id="username" placeholder="Username">
+        <div class="col-md-12 col-sm-12 col-xs-12 content text-center">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <img src="/images/home/login_user.png" alt="User Login">
+          </div>
+          <div class="col-md-8 col-sm-8 col-xs-8" id="frmLogin">
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+              <label for="username" class="col-md-2 col-sm-2 col-xs-2">Username</label>
+              <div class="col-md-5 col-sm-5 col-xs-5">
+                <input type="text" class="form-control" id="username" placeholder="Username">
+              </div>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+              <label for="password" class="col-md-2 col-sm-2 col-xs-2">Password</label>
+              <div class="col-md-5 col-sm-5 col-xs-5">
+                <input type="password" class="form-control" id="password" placeholder="password">
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+              <div class="col-md-7 col-sm-7 col-xs-7">
+                <div class="alert alert-danger" role="alert">
+                  <span>username or password is incorrect.</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <label for="password" class="col-md-2 col-sm-2 col-xs-2">Password</label>
-            <div class="col-md-5 col-sm-5 col-xs-5">
-              <input type="password" class="form-control" id="password" placeholder="password">
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 seperate">
+        </div>
+      </div>
+    </div>
+  </section>
+  <% } %>
+    <section id="provider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+              <h2>จัดทำโดย</h2>
             </div>
           </div>
-          <div class="form-group">
-            <button type="button" class="btn btn-primary" id="btnLogin">Login</button>
+          <div class="col-md-12 col-sm-12 col-xs-12 content text-center">
+            <table class="col-md-12 col-sm-12 col-xs-12">
+              <tr>
+                <td><img src="/images/home/logo/Uhosnet.png" alt="Uhosnet"></td>
+                <td><img src="/images/home/logo/si.png" alt="Siriraj"></td>
+                <td><img src="/images/home/logo/raj.png" alt=""></td>
+                <td><img src="/images/home/logo/ped.png" alt=""></td>
+                <td><img src="/images/home/logo/wa.png" alt=""></td>
+                <td><img src="/images/home/logo/mu.png" alt=""></td>
+                <td><img src="/images/home/logo/tu.png" alt=""></td>
+              </tr>
+              <tr>
+                <td colspan="7">&nbsp;</td>
+              </tr>
+              <tr>
+                <td><img src="/images/home/logo/swu.png" alt=""></td>
+                <td><img src="/images/home/logo/cu.png" alt=""></td>
+                <td><img src="/images/home/logo/psu.png" alt=""></td>
+                <td><img src="/images/home/logo/rama.png" alt=""></td>
+                <td><img src="/images/home/logo/ku.png" alt=""></td>
+                <td><img src="/images/home/logo/nu.png" alt=""></td>
+                <td><img src="/images/home/logo/bu.png" alt=""></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+              <h2>สนับสนุนโดย</h2>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 content">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right"> <img src="/images/home/logo/HSRI.png" alt=""></div>
+            <div class="col-md-6 col-sm-6 col-xs-6"><img src="/images/home/logo/GPO.png" alt=""></div>
           </div>
         </div>
       </div>
-      <div class="col-md-12 col-sm-12 col-xs-12 seperate">
-      </div>
-    </div>
-  </div>
-</section>
-<% } %>
-<section id="provider">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-          <h2>จัดทำโดย</h2>
-        </div>
-      </div>
-      <div class="col-md-12 col-sm-12 col-xs-12 content text-center">
-        <table class="col-md-12 col-sm-12 col-xs-12">
-          <tr>
-            <td><img src="/images/home/logo/Uhosnet.png" alt="Uhosnet"></td>
-            <td><img src="/images/home/logo/si.png" alt="Siriraj"></td>
-            <td><img src="/images/home/logo/raj.png" alt=""></td>
-            <td><img src="/images/home/logo/ped.png" alt=""></td>
-            <td><img src="/images/home/logo/wa.png" alt=""></td>
-            <td><img src="/images/home/logo/mu.png" alt=""></td>
-            <td><img src="/images/home/logo/tu.png" alt=""></td>
-          </tr>
-          <tr>
-            <td colspan="7">&nbsp;</td>
-          </tr>
-          <tr>
-            <td><img src="/images/home/logo/swu.png" alt=""></td>
-            <td><img src="/images/home/logo/cu.png" alt=""></td>
-            <td><img src="/images/home/logo/psu.png" alt=""></td>
-            <td><img src="/images/home/logo/rama.png" alt=""></td>
-            <td><img src="/images/home/logo/ku.png" alt=""></td>
-            <td><img src="/images/home/logo/nu.png" alt=""></td>
-            <td><img src="/images/home/logo/bu.png" alt=""></td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-          <h2>สนับสนุนโดย</h2>
-        </div>
-      </div>
-      <div class="col-md-12 col-sm-12 col-xs-12 content">
-        <div class="col-md-6 col-sm-6 col-xs-6 text-right"> <img src="/images/home/logo/HSRI.png" alt=""></div>
-        <div class="col-md-6 col-sm-6 col-xs-6"><img src="/images/home/logo/GPO.png" alt=""></div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>

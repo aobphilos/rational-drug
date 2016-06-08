@@ -17,8 +17,6 @@ passport.use(new LocalStrategy({
     },
     function(username, password, done) {
 
-        console.log('apply passport: ', username, ' - ', password);
-
         User.findOne({ username: username, password: password }, function(err, user) {
             if (err) {
                 return done(err);

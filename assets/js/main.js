@@ -134,6 +134,8 @@ jQuery(function($) {
     // Result Section
     if ($('#results').length > 0) {
 
+      $(".alert").hide();
+
       $("#btnLogin").on('click', function(e) {
         e.preventDefault();
 
@@ -147,8 +149,17 @@ jQuery(function($) {
           if (result.user) {
             window.location.href = "/results";
           } else {
-            console.log('login failed !');
+            $("#frmLogin").removeClass("has-warning");
+            $("#frmLogin").addClass("has-error");
+            $(".alert").show();
+
+            setTimeout(function() {
+              $(".alert").hide();
+              $("#frmLogin").removeClass("has-error");
+              $("#frmLogin").addClass("has-warning");
+            }, 3500);
           }
+
 
         };
 

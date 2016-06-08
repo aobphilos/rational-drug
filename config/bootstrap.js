@@ -32,7 +32,7 @@ module.exports.bootstrap = function(cb) {
         { username: "srinagarind", password: "password" },
         { username: "naresuan", password: "password" },
         { username: "burapha", password: "password" },
-    ]
+    ];
 
 
     var qInsert = _.map(userList, UserService.findOrCreateUser);

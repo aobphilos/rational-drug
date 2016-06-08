@@ -67,7 +67,7 @@ module.exports = {
         return res.view("home/multimedia", vm);
     },
 
-    results: function(req, res){
+    results: function(req, res) {
 
         var vm = {
             title: 'Result',

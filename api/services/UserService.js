@@ -8,7 +8,7 @@ module.exports = {
         var deferred = Q.defer();
 
         // find user data
-        User.findOne({ userName: u.userName, password: u.password })
+        User.findOne({ username: u.username, password: u.password })
             .exec(function(err, data) {
 
                 if (err) {
@@ -28,7 +28,7 @@ module.exports = {
         var deferred = Q.defer();
 
         // find user data
-        User.findOne({ userName: u.userName, password: u.password })
+        User.findOne({ username: u.username, password: u.password })
             .exec(function(err, data) {
 
                 if (err) {
